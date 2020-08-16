@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+
+import simple_draw as sd
+
+sd.resolution = (1200, 600)
+
+
+# Написать функцию рисования пузырька, принммающую 2 (или более) параметра: точка рисовании и шаг
+
+def bubble(point, step):
+    radius = 50
+    for _ in range(3):
+        radius += step
+        sd.circle(point, radius=radius, color=sd.COLOR_RED)
+
+
+point = sd.get_point(300, 200)
+bubble(point=point, step=5)
+
+sd.pause()

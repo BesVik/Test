@@ -1,0 +1,19 @@
+import simple_draw as sd
+
+sd.resolution = (1200, 600)
+
+
+# Нарисовать три ряда по 10 пузырьков
+def bubble(point, step):
+    radius = 50
+    for _ in range(1):
+        radius += step
+        sd.circle(point, radius=radius, color=sd.COLOR_RED, width=3)
+
+
+for y in range(100, 301, 100):
+    for x in range(100, 1001, 100):
+        point = sd.get_point(x, y)
+        bubble(point=point, step=5)
+
+sd.pause()
